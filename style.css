@@ -1,0 +1,866 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --second-bg-color: #f5f6fc;
+  --text-color: #ffffff;
+  --second-text-color: #2b326b;
+  --skin-color: #004aad;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-color);
+}
+
+section {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+section h2 {
+  font-size: 4rem;
+  color: var(--second-text-color);
+}
+
+/* header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 10%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: 1s;
+}
+
+.background {
+  background: var(--second-bg-color);
+}
+
+/* Futuro Carrito de compras
+header a i {
+    color: var(--second-bg-color);
+    vertical-align: -.3rem;
+    font-size: 3rem;
+} */
+
+.logo {
+  font-size: 3rem;
+  font-weight: 600;
+  cursor: default;
+  color: var(--second-bg-color);
+}
+
+.abrir-menu,
+.cerrar-menu {
+  display: none;
+}
+
+nav {
+  display: flex;
+  background: var(--bg-color);
+  border-radius: 3rem;
+}
+
+nav a {
+  font-size: 1.5rem;
+  transition: 0.3s;
+  color: var(--skin-color);
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+}
+
+nav a:hover,
+nav a:active {
+  color: var(--second-bg-color);
+  background: var(--skin-color);
+}
+
+.active {
+  color: var(--second-bg-color);
+  background: var(--skin-color);
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.menu .btn i {
+  font-size: 2.5rem;
+  transition: 0.3s;
+  color: var(--skin-color);
+  background: var(--bg-color);
+  border-radius: 50%;
+  padding: 0.8rem;
+}
+
+.menu .btn i:hover {
+  background: var(--skin-color);
+  color: var(--second-bg-color);
+}
+
+/* inicio */
+#inicio {
+  min-height: 100vh;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.capa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.4;
+  mix-blend-mode: overlay;
+}
+
+.texto-inicio {
+  position: absolute;
+  justify-content: center;
+  text-align: center;
+}
+
+.texto-inicio h1 {
+  font-size: 5rem;
+  font-weight: 500;
+  text-shadow: 0.1rem 0.1rem 0.1rem var(--second-text-color);
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.texto-inicio p {
+  max-width: 100rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--text-color);
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(1rem);
+  text-shadow: var(--bg-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.8);
+  border-right: 0.1rem solid rgba(255, 255, 255, 0.8);
+  box-shadow: var(--bg-color);
+}
+
+.texto-inicio .btn {
+  display: inline-block;
+  background: var(--text-color);
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--second-text-color);
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.3s;
+  margin: 3.5rem 0;
+}
+
+.texto-inicio .btn:hover {
+  box-shadow: 0 0 0.5rem var(--text-color);
+}
+
+/* Excursiones */
+#excursiones {
+  background-color: var(--second-bg-color);
+}
+
+#excursiones h2 {
+  margin-top: 8rem;
+}
+
+h8 {
+  font-size: 1.5rem;
+}
+
+.contenedor-excursiones {
+  margin: 0 20%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.carta {
+  position: relative;
+  width: 25rem;
+  height: 35rem;
+  margin: 0 1.5rem;
+}
+
+.carta .cara {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  backface-visibility: hidden;
+  border-radius: 1rem 1rem 1rem 1rem;
+  overflow: hidden;
+  transition: 0.8s;
+}
+
+.carta .frente {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 0.5rem 1rem #000;
+}
+
+.carta .frente img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carta .frente h8 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5rem;
+  line-height: 5rem;
+  color: var(--bg-color);
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.carta .dorso {
+  transform: perspective(600px) rotateY(180deg);
+  background-color: rgb(3, 35, 54);
+  padding: 1.5rem;
+  color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 0.5rem 1rem #000;
+}
+
+.carta .dorso .link {
+  font-size: 2rem;
+  border-top: solid 0.1rem #f3f3f3;
+  height: 5rem;
+  line-height: 5rem;
+}
+.carta .dorso .link a {
+  color: #f3f3f3;
+}
+
+.carta .dorso h9 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  letter-spacing: 0.1rem;
+  color: var(--bg-color);
+}
+
+.carta:hover .frente {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.carta:hover .dorso {
+  transform: perspective(600px) rotateY(360deg);
+}
+
+/* alojamientos */
+
+#alojamientos {
+  background: var(--second-bg-color);
+}
+
+.row h2 {
+  margin: 10rem 0 3rem;
+}
+
+.contenedor-alojamiento {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+}
+
+.contenedor-alojamiento h3 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.col {
+  width: 55rem;
+  margin: 1rem;
+  align-self: flex-start;
+}
+
+.row {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.carousel {
+  max-width: 100%;
+  height: 60rem;
+  position: relative;
+}
+
+.carousel-images {
+  text-align-last: initial;
+  max-width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  height: 10%;
+  position: absolute;
+  top: 41rem;
+  transition: all 0.5s ease;
+  transform: translateX(10%);
+}
+
+.carousel-images img {
+  border-radius: .5rem;
+  width: 60%;
+  height: 30%;
+  object-fit: cover;
+}
+
+.carousel-bkg {
+  position: absolute;
+  margin-left: 5rem;
+  width: 40rem;
+  height: 40rem;
+}
+
+.carousel-bkg img {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 1rem 0.1rem rgb(0, 0, 0, 0.3);
+  scale: 1;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 20rem;
+}
+
+.carousel-images img.active {
+  opacity: 1;
+  transform: scale(1.2);
+  animation: cambio 2s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes cambio {
+  0% {
+    transform: scale(1.3);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 1;
+  }
+}
+
+.carousel-buttons {
+  position: relative;
+  width: 73%;
+  height: 5rem;
+  top: 41rem;
+  margin-left: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel-buttons button {
+  display: inline-flex;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: var(--skin-color);
+  border-radius: 0.3rem;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel-buttons :hover {
+  opacity: 0.9;
+  background-color: var(--skin-color);
+}
+
+.carousel-buttons img {
+  width: 40%;
+  height: 40%;
+}
+
+.parrafo-derecho {
+  align-self: flex-start;
+  color: var(--second-text-color);
+}
+
+.parrafo-derecho h3,
+.parrafo-derecho p {
+  text-align: left;
+}
+
+.parrafo-derecho p {
+  font-size: 1.8rem;
+}
+
+.redes-sociales a {
+  display: inline-flex;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: var(--skin-color);
+  border-radius: 0.3rem;
+  text-decoration: none;
+  margin-right: 0.5rem;
+  margin-top: 1rem;
+  transition: 0.4s;
+}
+
+.redes-sociales a:hover {
+  background: var(--second-bg-color);
+  border: 0.15rem solid var(--skin-color);
+}
+
+.redes-sociales a i {
+  font-style: normal;
+  font-size: 2rem;
+  color: var(--second-bg-color);
+  transition: 0.3s;
+}
+
+.redes-sociales a:hover i {
+  color: var(--skin-color);
+}
+
+/* contacto */
+#contacto {
+  background-color: var(--second-bg-color);
+}
+
+#contacto h2 i {
+  vertical-align: -0.45rem;
+  margin-left: 0.6rem;
+}
+
+.mapa {
+  display: flex;
+}
+
+#contacto form {
+  max-width: 100%;
+  text-align: center;
+  margin-left: 2rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #ffffff88;
+}
+
+#contacto form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#contacto form .input-box input,
+#contacto form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--second-text-color);
+  border-radius: 0.8rem;
+  margin: 0.7rem 0;
+}
+
+#contacto form .input-box input {
+  width: 49%;
+}
+
+#contacto form textarea {
+  resize: none;
+}
+
+#contacto form .btn {
+  display: inline-block;
+  background: var(--second-text-color);
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  letter-spacing: 0.05rem;
+  font-weight: 500;
+  transition: 0.3s;
+  margin: 0.4rem 0;
+}
+
+#contacto form .btn:hover {
+  box-shadow: 0 0 0.5rem var(--second-text-color);
+}
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.5rem 10%;
+  background: linear-gradient(
+    180deg,
+    var(--skin-color) 0%,
+    var(--second-text-color) 100%
+  );
+}
+
+footer h4 {
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+footer a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  background-color: var(--second-bg-color);
+  border-radius: 0.8rem;
+  transition: 0.3s;
+}
+
+footer a:hover {
+  box-shadow: 0 0 0.5rem var(--second-bg-color);
+}
+
+footer a i {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    font-size: 2.5rem;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  .abrir-menu {
+    background: none;
+  }
+
+  .abrir-menu i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--skin-color);
+    background: var(--bg-color);
+    border-radius: 50%;
+    padding: 0.8rem;
+  }
+
+  .abrir-menu i:hover {
+    background: var(--skin-color);
+    color: var(--second-bg-color);
+  }
+
+  .cerrar-menu {
+    background: transparent;
+  }
+
+  .cerrar-menu i {
+    color: var(--text-color);
+  }
+
+  nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--second-text-color);
+    border-radius: 0;
+    padding: 4rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+  }
+
+  nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  nav a {
+    color: var(--text-color);
+  }
+
+  .contenedor-excursiones {
+    margin: 0 10%;
+  }
+
+  #excursiones h2 {
+    margin-bottom: 3rem;
+    margin-top: 10rem;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .col {
+    width: 60rem;
+  }
+
+  .redes-sociales {
+    margin-bottom: 4rem;
+  }
+
+  .carousel-bkg {
+    margin-left: 10rem;
+  }
+
+  .parrafo-derecho h3,
+  .parrafo-derecho p {
+    text-align: center;
+  }
+
+  #contacto form {
+    width: 45%;
+  }
+
+  .carousel-buttons {
+    position: relative;
+    width: 100%;
+    height: 5rem;
+    top: 26rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .texto-inicio {
+    margin: 0 10%;
+  }
+
+  .texto-inicio h1 {
+    font-size: 4rem;
+  }
+
+  #contacto h2 {
+    margin: 10rem 0 2rem 0;
+  }
+
+  .mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #contacto form {
+    width: 80%;
+    margin: 3rem 0;
+  }
+
+  iframe {
+    width: 90%;
+  }
+
+  #excursiones h2 {
+    margin-bottom: 2rem;
+  }
+
+  .contenedor-excursiones {
+    margin: 0 10%;
+  }
+
+  .carta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 2rem 5rem 2rem;
+  }
+
+  .carta .frente {
+    height: 15rem;
+    z-index: 1;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .carta .frente img {
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .carta .dorso {
+    transform: none;
+    height: 25rem;
+    margin-top: 8.5rem;
+  }
+
+  .carta:hover .frente {
+    transform: none;
+  }
+
+  .carta:hover .dorso {
+    transform: none;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  .tiempo {
+    display: none;
+  }
+
+  .texto-inicio {
+    margin: 0 5%;
+  }
+
+  .texto-inicio h1 {
+    font-size: 3rem;
+  }
+
+  .texto-inicio p {
+    font-size: 1.5rem;
+  }
+
+  .col {
+    width: 30rem;
+    margin: 1rem;
+    align-self: flex-start;
+  }
+
+  .carousel {
+    max-width: 100%;
+    height: 45rem;
+    position: relative;
+  }
+
+  .carousel-images {
+    flex-wrap: nowrap;
+    text-align-last: initial;
+    max-width: 100%;
+    display: flex;
+    height: 10%;
+    position: absolute;
+    top: 28rem;
+    transition: all 0.5s ease;
+    transform: none;
+  }
+
+  .carousel-bkg {
+    position: absolute;
+    display: flex;
+    margin-left: 0rem;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .carousel-bkg img {
+    width: 30rem;
+    height: auto;
+    box-shadow: 0 0 1rem 0.1rem rgb(0, 0, 0, 0.3);
+    scale: 1;
+  }
+
+  .carousel-buttons {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    top: 26rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0px;
+  }
+
+  .parrafo-derecho {
+    align-self: flex-start;
+    color: var(--second-text-color);
+  }
+
+  .parrafo-derecho h3,
+  .parrafo-derecho p {
+    text-align: center;
+  }
+
+  .parrafo-derecho p {
+    font-size: 1.6rem;
+  }
+
+  footer {
+    justify-content: center;
+  }
+
+  footer h4 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  
+  .texto-inicio h1 {
+    margin-top: 5rem;
+  }
+
+  .texto-inicio p {
+    font-size: 1.4rem;
+  }
+
+}
